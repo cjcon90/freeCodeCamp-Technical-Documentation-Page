@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono:wght@500&family=Share+Tech+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet">   
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <h1 class="nav-title">Introduction to Git</h1>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#what_is_git" class="nav-link">What is Git</a>
+            </li>
+            <li class="nav-item">
+                <a href="#install_git" class="nav-link">Install Git</a>
+            </li>
+            <li class="nav-item">
+                <a href="#setup_git" class="nav-link">Setup Git</a>
+            </li>
+            <li class="nav-item">
+                <a href="#creating_a_repository" class="nav-link">Creating a repository</a>
+            </li>
+            <li class="nav-item">
+                <a href="#add_files_and_commit" class="nav-link">Add files and commit</a>
+            </li>
+            <li class="nav-item">
+                <a href="#push_your_changes" class="nav-link">Push your changes</a>
+            </li>
+            <li class="nav-item">
+                <a href="#branching" class="nav-link">Branching</a>
+            </li>
+            <li class="nav-item">
+                <a href="#update_and_merge" class="nav-link">Update and merge</a>
+            </li>
+            <li class="nav-item">
+                <a href="#git_log" class="nav-link">Git log</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section">
+            <h2 class="heading" id="what_is_git">What is Git</h2>
+            <p class="main-p">
+                Git is a distributed version control system that is widely used by a number of open source projects. It
+                was started in the year 2005 by Linux founder, Linus Torvalds. The program allows for a non-linear
+                development of projects, and can handle large amounts of data effectively by storing it on the local
+                server. In this tutorial, we are going to play around Git and learn how to get started with it.
+            </p>
+            <p class="main-p">
+                I am using Ubuntu in this tutorial but you can use any Linux distribution of your choice. Apart from
+                installation, rest all commands are the same in all Linux distributions.
+            </p>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="install_git">Install Git</h2>
+        </section>
+        <p class="main-p">
+            To install git on Ubuntu and other Ubuntu-based systems, run this command :
+        </p>
+
+        <code class="main-code">sudo apt-get install git-core</code>
+
+        <p class="main-p">
+            After it finishes downloading, you will have Git installed and ready to use.
+        </p>
+        <section class="main-section">
+            <h2 class="heading" id="setup_git">Setup Git</h2>
+            <p class="main-p">
+                After Git is installed, whether from apt-get or from the source, you need to copy your username and
+                email in the gitconfig file. You can access this file at ~/.gitconfig.
+            </p>
+
+            <p class="main-p">
+                Opening it following a fresh Git install would reveal a completely blank page:
+            </p>
+
+            <code class="main-code">sudo vim ~/.gitconfig</code>
+
+            <p class="main-p">
+                You can use the follow commands to add in the required information. Replace ‘user’ with your username
+                and ‘user@example.com’ with your email.
+            </p>
+
+            <code class="main-code">
+                git config --global user.name "User"</code>
+            <code class="main-code">git config --global user.email user@example.com</code>
+
+
+            <p class="main-p">
+                And you are done with setting up! Now let’s get started with Git.
+            </p>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="creating_a_repository">Creating a repository</h2>
+            <p class="main-p">Create a new directory, open it and run this command:</p>
+            <code class="main-code">git init</code>
+            <p class="main-p">
+                This will create a new git repository. Your local repository consists of three “trees” maintained by
+                git.
+            </p>
+            <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589322094/freeCodeCamp-tech-doc-page/Playing-around-git-1_zyxaes.webp"
+                alt="screenshot of git init being used in linux terminal" class="git-img">
+            <p class="main-p">
+                First one is your <strong>Working Directory</strong> which holds the actual files. Second one is the
+                Index which acts as
+                a staging area and finally the HEAD which points to the last commit you’ve made.checkout your repository
+                using git clone /path/to/repository.
+            </p>
+
+            <p class="main-p">
+                Checkout your repository (repository you just created or an existing repository on a server) using git
+                clone /path/to/repository.
+            </p>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="add_files_and_commit">Add files and commit</h2>
+            <p class="main-p">
+                You can propose changes using:
+            </p>
+
+            <code class="main-code">git add <em>filename</em> </code>
+
+            <p class="main-p">
+                This will add a new file for the commit. If you want to add every new file, then just do:
+            </p>
+
+            <code class="main-code">
+                git add --all
+            </code>
+
+            <p class="main-p">
+                Your files are added check your status using
+            </p>
+
+            <code class="main-code">git status</code>
+
+            <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589322093/freeCodeCamp-tech-doc-page/Playing-around-git-2_yqb9bh.webp"
+                alt="screenshot of git status being used in linux terminal" class="git-img">
+
+            <p class="main-p">
+                As you can see, there are changes but they are not committed. Now you need to commit these changes, use:
+            </p>
+
+            <code class="main-code">git commit -m "Commit message"</code>
+
+            <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589322093/freeCodeCamp-tech-doc-page/playing-around-git-3_dgrxco.webp"
+                alt="screenshot of git commit being used in linux terminal" class="git-img">
+
+            <p class="main-p">
+                You can also do (preferred):
+            </p>
+
+            <code class="main-code">git commit -a</code>
+
+            <p class="main-p">
+                And then write your commit message. Now the file is committed to the HEAD, but not in your remote
+                repository yet.
+            </p>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="push_your_changes">Push your changes</h2>
+            <p class="main-p">
+                Your changes are in the HEAD of your local working copy. If you have not cloned an existing repository
+                and want to connect your repository to a remote server, you need to add it first with:
+            </p>
+
+            <code class="main-code">git remote add origin <em>serveraddress</em></code>
+
+            <p class="main-p">
+                Now you are able to push your changes to the selected remote server.To send those changes to your remote
+                repository, run:
+            </p>
+
+            <code class="main-code">git push -u origin master</code>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="branching">Branching</h2>
+            <p class="main-p">
+                Branches are used to develop features which are isolated from each other. The master branch is the
+                “default” branch when you create a repository. Use other branches for development and merge them back to
+                the master branch upon completion.
+            </p>
+
+            <p class="main-p">
+                Create a new branch named “mybranch” and switch to it using:
+            </p>
+
+            <code class="main-code">git checkout -b mybranch</code>
+
+            <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589322094/freeCodeCamp-tech-doc-page/Playing-around-Git-4-_pkmrec.webp"
+                alt="screenshot of checkout mybranch command being used in linux terminal" class="git-img">
+
+
+            <p class="main-p">
+                You can switch back to master by running:
+            </p>
+
+            <code class="main-code">git checkout master</code>
+
+            <p class="main-p">
+                If you want to delete the branch use:
+            </p>
+
+            <code class="main-code">git branch -d mybranch</code>
+
+            <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589322094/freeCodeCamp-tech-doc-page/Playing-around-Git-5-1_vemegz.webp"
+                alt="screenshot of git branch delete command being used in linux terminal" class="git-img">
+
+
+            <p class="main-p">
+                A branch is not available to others unless you push the branch to your remote repository, so what are
+                you thinking about just push it:
+            </p>
+
+            <code class="main-code">git push origin</code>
+            <branchname>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="update_and_merge">Update and merge</h2>
+            <p class="main-p">
+                To update your local repository to the newest commit, run:
+            </p>
+
+            <code class="main-code">git pull</code>
+
+            <p class="main-p">
+                In your working directory to fetch and merge remote changes.To merge another branch into your active
+                branch (e.g. master), use :
+            </p>
+
+            <code class="main-code">git merge <em>branch</em></code>
+
+            <p class="main-p">
+                In both cases, git tries to auto-merge changes. Unfortunately, this is not always possible and results
+                in conflicts. You are responsible for merging those conflicts manually by editing the files shown by
+                git. After changing, you need to mark them as merged with
+            </p>
+
+            <code class="main-code">git add <em>filename</em></code>
+
+            <p class="main-p">
+                Before merging changes, you can also preview them by using
+            </p>
+
+            <code class="main-code">git diff <em>sourcebranch targetbranch</em></code>
+        </section>
+        <section class="main-section">
+            <h2 class="heading" id="git_log">Git log</h2>
+            <p class="main-p">
+                You can see the repository history using.
+            </p>
+
+            <code class="main-code">git log</code>
+
+            <p class="main-p">
+                To see a log where each commit is one line you can use:
+            </p>
+
+            <code class="main-code">git log --pretty=oneline</code>
+
+            <p class="main-p">
+                Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and
+                branches:
+            </p>
+
+            <code class="main-code">git log --graph --oneline --decorate --all</code>
+
+            <p class="main-p">
+                If you want to see only which files have changed:
+            </p>
+
+            <code class="main-code">git log --name-status</code>
+        </section>
+
+    </main>
+
+
+
+
+
+
+</body>
+
+</html>
