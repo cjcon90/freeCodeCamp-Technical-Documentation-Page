@@ -20,6 +20,7 @@
     position: fixed;
     min-width: 300px;
     width: 300px;
+    scrollbar-color: var(--background-code) var(--background-nav);
     overflow-y: auto;
 }
 
@@ -68,6 +69,7 @@
 .heading {
     color: var(--text-heading);
     font-family: 'Roboto Mono', monospace;
+    text-align: left;
     padding: 15px;
     font-size: 1.8em;
 
@@ -125,3 +127,54 @@
     color: var(--text-heading);
 }
 
+@media only screen and (max-width: 800px) {
+
+    
+    #navbar {
+        all: unset;
+        background-color: var(--background-nav);
+        display: inline-block;
+        border-bottom: 4px solid var(--text-heading);
+        width: 100%;
+        scrollbar-color: var(--text-heading) var(--background-code);
+        height: 310px;
+        overflow-y: auto;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .nav-title {
+        font-size: 1.8rem;
+
+    }
+
+    .nav-item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #main-doc {
+        all: unset;
+        background-color: var(--background-main);
+        display: inline-block;
+        max-width: 100%;
+        text-align: justify;
+        line-height: 2.5rem;
+
+        /* height: auto;
+        left: 0;
+        position: absolute;
+        margin-top: 310px;
+        padding: 20px;
+        text-align: justify;
+        line-height: 2.5rem; */
+    }
+
+    .git-img {
+        max-width: 90%;
+        object-fit: scale-down;
+    }
+
+}
