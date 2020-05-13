@@ -27,8 +27,8 @@
     display: block;
     color: var(--background-main);
     font-family: 'Roboto Mono', monospace;
-    font-size: 2rem;
-    padding: 40px 10px 40px 10px;
+    font-size: 2.2em;
+    padding: 30px 5px 30px 5px;
     max-width: 100%;
     text-align: center;
 }
@@ -60,10 +60,16 @@
     line-height: 2.5rem;
 }
 
+.main-section {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
 .heading {
     color: var(--text-heading);
     font-family: 'Roboto Mono', monospace;
     padding: 15px;
+    font-size: 1.8em;
 
 }
 
@@ -87,7 +93,35 @@
     display: inline-block;
     border: solid 1.5px var(--text-heading);
     margin: 15px;
-    padding: 10px 15px 10px 15px; 
+    padding: 7.5px 15px 7.5px 15px; 
     text-align: left;
+}
+
+.learn-list {
+    list-style: disc;
+    margin: 15px;
+    margin-left: 30px;
+    
+}
+
+.learn-list li::marker {
+    color: var(--text-heading);
+}
+
+.learn-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 15px;
+}
+
+.learn-link:visited {
+    color: rgb(75, 75, 75);
+}
+
+.learn-link:hover {
+    color: var(--text-heading);
 }
 

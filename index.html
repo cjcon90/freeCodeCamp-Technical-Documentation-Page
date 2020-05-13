@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono:wght@500&family=Share+Tech+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet">   
-    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono:wght@500&family=Share+Tech+Mono&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+    <title>Introduction to Git</title>
 </head>
 
 <body>
     <nav id="navbar">
-        <h1 class="nav-title">Introduction to Git</h1>
+        <header class="nav-title">Introduction to Git</header>
         <ul class="nav-list">
             <li class="nav-item">
                 <a href="#what_is_git" class="nav-link">What is Git</a>
@@ -40,12 +42,15 @@
             <li class="nav-item">
                 <a href="#git_log" class="nav-link">Git log</a>
             </li>
+            <li class="nav-item">
+                <a href="#learn_more" class="nav-link">Learn More</a>
+            </li>
         </ul>
     </nav>
 
     <main id="main-doc">
-        <section class="main-section">
-            <h2 class="heading" id="what_is_git">What is Git</h2>
+        <section class="main-section" id="what_is_git">
+            <header class="heading">What is Git</header>
             <p class="main-p">
                 Git is a distributed version control system that is widely used by a number of open source projects. It
                 was started in the year 2005 by Linux founder, Linus Torvalds. The program allows for a non-linear
@@ -57,20 +62,20 @@
                 installation, rest all commands are the same in all Linux distributions.
             </p>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="install_git">Install Git</h2>
+        <section class="main-section" id="install_git">
+            <header class="heading">Install Git</header>
+            <p class="main-p">
+                To install git on Ubuntu and other Ubuntu-based systems, run this command :
+            </p>
+    
+            <code class="main-code">sudo apt-get install git-core</code>
+    
+            <p class="main-p">
+                After it finishes downloading, you will have Git installed and ready to use.
+            </p>
         </section>
-        <p class="main-p">
-            To install git on Ubuntu and other Ubuntu-based systems, run this command :
-        </p>
-
-        <code class="main-code">sudo apt-get install git-core</code>
-
-        <p class="main-p">
-            After it finishes downloading, you will have Git installed and ready to use.
-        </p>
-        <section class="main-section">
-            <h2 class="heading" id="setup_git">Setup Git</h2>
+        <section class="main-section" id="setup_git">
+            <header class="heading">Setup Git</header>
             <p class="main-p">
                 After Git is installed, whether from apt-get or from the source, you need to copy your username and
                 email in the gitconfig file. You can access this file at ~/.gitconfig.
@@ -96,8 +101,8 @@
                 And you are done with setting up! Now let’s get started with Git.
             </p>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="creating_a_repository">Creating a repository</h2>
+        <section class="main-section" id="creating_a_repository">
+            <header class="heading">Creating a repository</header>
             <p class="main-p">Create a new directory, open it and run this command:</p>
             <code class="main-code">git init</code>
             <p class="main-p">
@@ -118,8 +123,8 @@
                 clone /path/to/repository.
             </p>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="add_files_and_commit">Add files and commit</h2>
+        <section class="main-section" id="add_files_and_commit">
+            <header class="heading">Add files and commit</header>
             <p class="main-p">
                 You can propose changes using:
             </p>
@@ -163,8 +168,8 @@
                 repository yet.
             </p>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="push_your_changes">Push your changes</h2>
+        <section class="main-section" id="push_your_changes">
+            <header class="heading">Push your changes</header>
             <p class="main-p">
                 Your changes are in the HEAD of your local working copy. If you have not cloned an existing repository
                 and want to connect your repository to a remote server, you need to add it first with:
@@ -179,8 +184,8 @@
 
             <code class="main-code">git push -u origin master</code>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="branching">Branching</h2>
+        <section class="main-section" id="branching">
+            <header class="heading">Branching</header>
             <p class="main-p">
                 Branches are used to develop features which are isolated from each other. The master branch is the
                 “default” branch when you create a repository. Use other branches for development and merge them back to
@@ -221,8 +226,8 @@
             <code class="main-code">git push origin</code>
             <branchname>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="update_and_merge">Update and merge</h2>
+        <section class="main-section" id="update_and_merge">
+            <header class="heading">Update and merge</header>
             <p class="main-p">
                 To update your local repository to the newest commit, run:
             </p>
@@ -250,8 +255,8 @@
 
             <code class="main-code">git diff <em>sourcebranch targetbranch</em></code>
         </section>
-        <section class="main-section">
-            <h2 class="heading" id="git_log">Git log</h2>
+        <section class="main-section" id="git_log">
+            <header class="heading">Git log</header>
             <p class="main-p">
                 You can see the repository history using.
             </p>
@@ -276,6 +281,18 @@
             </p>
 
             <code class="main-code">git log --name-status</code>
+        </section>
+        <section class="main-section" id="learn_more">
+            <header class="heading">Learn More</header>
+            <p class="main-p">The GitHub team has created a library of educational videos and guides to help users
+                continue to develop their skills and build better software:</p>
+                <ul class="learn-list">
+                    <li><a href="https://github.com/showcases/great-for-new-contributors" class="learn-link" >Beginner projects to explore</a></li>
+                    <li><a href="https://youtube.com/githubguides" class="learn-link">GitHub video guides</a></li>
+                    <li><a href="https://services.github.com/on-demand/" class="learn-link">GitHub on-demand training</a></li>
+                    <li><a href="https://guides.github.com/" class="learn-link">GitHub training guides</a></li>
+                    <li><a href="https://services.github.com/resources/" class="learn-link">GitHub training resources</a></li>
+                </ul>
         </section>
 
     </main>
