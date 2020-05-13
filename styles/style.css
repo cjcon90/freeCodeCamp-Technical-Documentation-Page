@@ -136,7 +136,7 @@
         display: inline-block;
         border-bottom: 4px solid var(--text-heading);
         width: 100%;
-        scrollbar-color: var(--text-heading) var(--background-code);
+        scrollbar-color: var(--background-code) var(--background-nav);
         height: 310px;
         overflow-y: auto;
     }
